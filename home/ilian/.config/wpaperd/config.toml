@@ -1,0 +1,5 @@
+[default]
+duration = "15m"
+path = "/bigssd/Bilder/currentWallpapers/"
+mode = "fit"
+# apply-shadow = true

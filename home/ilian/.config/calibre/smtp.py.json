@@ -1,0 +1,18 @@
+{
+  "accounts": {
+    "gass22_DqsmlQ@kindle.com": [
+      "EPUB, TPZ",
+      true,
+      true
+    ]
+  },
+  "aliases": {},
+  "encryption": "TLS",
+  "from_": "ilian-ode@gmx.de",
+  "relay_host": "mail.gmx.com",
+  "relay_password": "494555415056495a585735475359434856504f36",
+  "relay_port": 587,
+  "relay_username": "ilian-ode@gmx.de",
+  "subjects": {},
+  "tags": {}
+}

@@ -1,0 +1,24 @@
+# Halloy config.
+#
+# For a complete list of available options,
+# please visit https://halloy.squidowl.org/configuration/index.html
+
+[dashboard]
+theme = "Macchiato"
+
+[servers.twitch]
+nickname = "ilihansolow"
+password = "oauth:d3kpp3sfi9z4x349jqzeuc17zocevc"
+server = "irc.chat.twitch.tv"
+port = 6697
+channels = ["#karni", "#piratesoftware", "#noway4u_sir", "#tolkin"]
+
+[servers.overthewire]
+nickname = "ilihansolow"
+server = "ircs.overthewire.org"
+port = 6697
+
+[servers.libera]
+nickname = "ilihansolow"
+server = "irc.libera.chat"
+channels = ["#neovim"]

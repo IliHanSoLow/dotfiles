@@ -1,0 +1,14 @@
+#include ioiotheme
+include cacatppuccin-macchiato.txt
+
+set statusbar-home-tilde true
+
+# make things fit better
+set scroll-page-aware true
+set adjust-open width
+
+map <C-l> exec copy_ref
+map <C-g> exec "copy_ref --section"
+
+map D set "first-page-column 1:1"
+# map ,fr exec "open_typ.sh $FILE"

@@ -1,0 +1,139 @@
+# Audio
+XF86Audio{Prev,Next}
+	playerctl {prev,next}
+
+XF86AudioMicMute
+	~/wmconf/scripts/volumecontrol.sh -i m
+
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+	~/wmconf/scripts/volumecontrol.sh -o {m,d,i}
+
+XF86Audio{Play,Pause}
+	playerctl play-pause
+
+# Brightness control
+XF86MonBrightness{Up,Down}
+	~/wmconf/scripts/brightnesscontrol.sh {i,d}
+
+# BSPWM
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+super + control + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+#focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+#send focused desktop to next/previous/{dir} monitor
+super + ctrl + shift + {n,p,h,j,k,l}
+	bspc desktop -m {next,prev,west,south,north,east} --follow
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+super + ctrl + {minus,equal}
+	~/.config/sxhkd/change-layer.sh {decrease,increase}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# swap the current node and the biggest node
+super + g
+	bspc node -s biggest.local
+
+# focus the next/previous node in the current desktop
+super + {_,shift + }Tab
+	bspc node -f {next,prev}.local
+
+super + shift + {r,c}
+	bspc {wm -r,quit}
+
+super + {_,shift} + q
+	bspc node -{c,k}
+
+# change split direction
+super + r
+	bspc node @parent -R 90
+
+# Terminal
+super + t
+	kitty
+
+super + Return
+	kitty bash -c /home/ilian/.local/bin/sessionizer.sh
+
+# Lock
+control + alt + l
+	/home/ilian/.config/awesome/scripts/i3lock.sh
+
+# Browsers
+super + {b,n}
+	{firefox,qutebrowser}
+super + shift + n
+	brave
+
+alt + Return
+	bspc node -t '~fullscreen'
+
+super + shift + f
+	bspc node -t '~floating'
+
+super + shift + t
+	bspc node -t tiled
+
+# Files
+super + f
+	thunar
+
+# Program launcher
+super + d
+	rofi -show drun
+
+# Emote
+super + period
+	emote
+
+# Btop
+control + shift + Escape
+	kitty -e btop
+
+# Dmenu Programs
+super + y
+	networkmanager_dmenu
+
+# Bluetooth
+super + shift + b
+	~/wmconf/scripts/bluetooth.sh
+
+# Audiomenu
+super + a
+	~/wmconf/scripts/audiomenu.sh
+
+# Unipicker
+super + u 
+	unipicker --command "rofi -dmenu"
+
+# Boomer
+super + shift + r
+	/home/ilian/dotfiles/nixos/git_packages/in_path/boomer
+
+# Term Dropdown
+control + alt + t
+	tdrop -a -w 60% -h 40% -x 20% kitty nvim -c "cd /bigssd/Dokumente/ObsidianVault/"  /bigssd/Dokumente/ObsidianVault/notes/Scratch.md
+
+# Audio Dropdown
+control + alt + a
+	tdrop -a -w 33% -h 80% -y 10% pavucontrol
+
+super + Escape
+	wlogout
+
+super + shift + Escape
+	pkill -USR1 -x sxhkd
+
+Print
+	flameshot gui

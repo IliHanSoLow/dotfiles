@@ -1,0 +1,19 @@
+[[search_dirs]]
+path = '/bigssd/Dokumente/ProgrammingProjects'
+depth = 3
+
+[[search_dirs]]
+path = '/bigssd/Dokumente/git'
+depth = 1
+
+[[search_dirs]]
+path = '/bigssd/Dokumente/Q11/'
+depth = 3
+
+# [[search_dirs]]
+# path = '/bigssd/IdeaProjects/'
+# depth = 10
+
+[[search_dirs]]
+path = '/bigssd/Dokumente/GodotProjects/'
+depth = 1

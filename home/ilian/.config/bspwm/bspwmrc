@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+
+# workspaces
+bspc monitor eDP -d 1 2 3 4 5
+bspc monitor DP-1-0 -d 6 7 8 9 10
+
+
+# Autostart
+~/.config/polybar/launch.sh &
+numlockx &
+poweralertd &
+mpd &
+Thunar --daemon &
+sxhkd &
+picom &
+dunst&
+gammastep&
+feh --bg-scale /bigssd/Bilder/wallpaper/skeletonFestival.png &
+env > /tmp/sxhkd_bspwm.env &
+
+
+bspc config border_width 4
+bspc config window_gap 16
+bspc config split_ratio 0.6
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
+# bspc config pointer_follows_monitor true
